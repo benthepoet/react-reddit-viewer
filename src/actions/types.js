@@ -1,0 +1,2 @@
+export const CHANGE_SUBREDDIT = 'CHANGE_SUBREDDIT';
+export const FETCH_POSTS = 'FETCH_POSTS';
