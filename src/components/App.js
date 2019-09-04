@@ -1,6 +1,7 @@
 import React from 'react';
 
-import PostList from '../components/PostList';
+import Nav from './Nav';
+import PostList from './PostList';
 
 class App extends React.Component {
     componentDidMount() {
@@ -9,8 +10,13 @@ class App extends React.Component {
 
     render() {
         const { posts, subreddit, changeSubreddit, handleSubmit } = this.props;
-        return <div className="container p-1 shadow-light bg-white">
-            <PostList posts={posts} subreddit={subreddit} onSubmit={handleSubmit} onChangeSubreddit={changeSubreddit} />
+        return <div>
+            <Nav onInput={changeSubreddit} onSubmit={handleSubmit} subreddit={subreddit} />
+            <div className="flex pt-8">
+                <div></div>
+                <PostList posts={posts} subreddit={subreddit} />
+                <div></div>
+            </div>
         </div>
     }
 }

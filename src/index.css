@@ -13,22 +13,18 @@ code {
     monospace;
 }
 
-.bg-white {
-  background-color: #fff;
+.pt-8 {
+  padding-top: 4em;
 }
 
-.p-1 {
-  padding: 1em;
-}
-
-.mt-1 {
-  margin-top: 1em;
+.width-full {
+  width: 100%;
 }
 
 .shadow-light {
-  box-shadow: 2px 2px 4px 4px #ddd;
+  box-shadow: 2px 2px 4px 2px #ddd;
 }
 
-.full-width {
-  width: 100%;
+.bg-white {
+  background-color: #fff;
 }
