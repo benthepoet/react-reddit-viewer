@@ -6,7 +6,7 @@ import PostList from './PostList';
 
 const App = ({ fetchPosts, message, posts, subreddit }) => (
     <div>
-        <Nav onInput={fetchPosts} subreddit={subreddit} />
+        <Nav onInput={fetchPosts} />
         <div className="flex pt-8">
             <div></div>
             <div>
