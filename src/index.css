@@ -28,3 +28,15 @@ code {
 .bg-white {
   background-color: #fff;
 }
+
+.text-center {
+  text-align: center;
+}
+
+.color-light-gray {
+  color: #888;
+}
+
+.fa-reddit {
+  color: rgb(255, 69, 0);
+}

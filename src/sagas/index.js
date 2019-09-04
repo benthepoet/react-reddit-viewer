@@ -1,14 +1,21 @@
 import { call, debounce, put } from 'redux-saga/effects';
 
-import { FETCH_POSTS, FETCH_POSTS_FAILED, FETCH_POSTS_SUCCESS } from '../actions/types';
+import { FETCH_POSTS, FETCH_POSTS_FAILED, FETCH_POSTS_SUCCESS, RESET } from '../actions/types';
 import Api from '../services/Api';
 
 const fetchPostsAsync = function* (action) {
+    const { subreddit } = action.payload;
+
+    if (!subreddit) {
+        return yield put({ type: RESET });
+    }
+
     try {
-        const posts = yield call(Api.fetchPosts, action.payload.subreddit);
-        yield put({ type: FETCH_POSTS_SUCCESS, payload: { posts, subreddit: action.payload.subreddit } });
+        const posts = yield call(Api.fetchPosts, subreddit);
+        yield put({ type: FETCH_POSTS_SUCCESS, payload: { posts, subreddit } });
     } catch (error) {
-        yield put({ type: FETCH_POSTS_FAILED, error, payload: { subreddit: action.payload.subreddit } });
+        const message = `The subreddit '${subreddit}' is not valid.`;
+        yield put({ type: FETCH_POSTS_FAILED, payload: { message } });
     }
 }
 

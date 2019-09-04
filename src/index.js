@@ -9,14 +9,8 @@ import Root from './containers/Root';
 import { reducer } from './reducers';
 import { rootSaga } from './sagas';
 
-const initialState = { 
-    error: null,
-    posts: null,
-    subreddit: null 
-};
-
 const sagaMiddleware = createSagaMiddleware();
-const store = createStore(reducer, initialState, applyMiddleware(sagaMiddleware));
+const store = createStore(reducer, applyMiddleware(sagaMiddleware));
 sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(

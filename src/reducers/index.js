@@ -1,21 +1,25 @@
-import { FETCH_POSTS_FAILED, FETCH_POSTS_SUCCESS } from '../actions/types';
+import { FETCH_POSTS_FAILED, FETCH_POSTS_SUCCESS, RESET } from '../actions/types';
 
-export const reducer = (state, action) => {
+const initialState = {
+    message: 'Please enter a subreddit to view posts.'
+};
+
+export const reducer = (state = initialState, action) => {
     switch (action.type) {
         case FETCH_POSTS_FAILED:
             return {
-                ...state,
-                error: action.error,
-                posts: null,
-                subreddit: action.payload.subreddit
+                message: action.payload.message
             };
 
         case FETCH_POSTS_SUCCESS:
             return {
-                ...state,
-                error: null,
                 posts: action.payload.posts,
                 subreddit: action.payload.subreddit
+            };
+
+        case RESET:
+            return {
+                ...initialState
             };
 
         default:

@@ -1,17 +1,17 @@
 import React from 'react';
 
-import Error from './Error';
+import Message from './Message';
 import Nav from './Nav';
 import PostList from './PostList';
 
-const App = ({ fetchPosts, error, posts, subreddit }) => (
+const App = ({ fetchPosts, message, posts, subreddit }) => (
     <div>
         <Nav onInput={fetchPosts} subreddit={subreddit} />
         <div className="flex pt-8">
             <div></div>
             <div>
-                {error && 
-                    <Error subreddit={subreddit} />
+                {message && 
+                    <Message message={message} />
                 }
                 {posts &&
                     <PostList posts={posts} subreddit={subreddit} />
