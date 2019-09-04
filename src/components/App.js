@@ -9,7 +9,9 @@ class App extends React.Component {
 
     render() {
         const { posts, subreddit, changeSubreddit, handleSubmit } = this.props;
-        return <PostList posts={posts} subreddit={subreddit} onSubmit={handleSubmit} onChangeSubreddit={changeSubreddit} />
+        return <div className="container p-1 shadow-light bg-white">
+            <PostList posts={posts} subreddit={subreddit} onSubmit={handleSubmit} onChangeSubreddit={changeSubreddit} />
+        </div>
     }
 }
 

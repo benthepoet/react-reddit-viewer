@@ -1,8 +1,9 @@
 import React from 'react';
+import he from 'he';
 
 const Post = ({ name, title }) => (
     <tr key={name}>
-        <td>{title}</td>
+        <td>{he.decode(title)}</td>
     </tr>
 );
 
