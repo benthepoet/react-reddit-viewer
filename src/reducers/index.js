@@ -1,17 +1,21 @@
-import { CHANGE_SUBREDDIT, FETCH_POSTS_SUCCESS } from '../actions/types';
+import { FETCH_POSTS_FAILED, FETCH_POSTS_SUCCESS } from '../actions/types';
 
 export const reducer = (state, action) => {
     switch (action.type) {
-        case CHANGE_SUBREDDIT:
+        case FETCH_POSTS_FAILED:
             return {
                 ...state,
+                error: action.error,
+                posts: null,
                 subreddit: action.payload.subreddit
             };
 
         case FETCH_POSTS_SUCCESS:
             return {
                 ...state,
-                posts: action.payload.posts
+                error: null,
+                posts: action.payload.posts,
+                subreddit: action.payload.subreddit
             };
 
         default:

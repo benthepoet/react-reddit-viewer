@@ -9,7 +9,11 @@ import Root from './containers/Root';
 import { reducer } from './reducers';
 import { rootSaga } from './sagas';
 
-const initialState = { posts: [], subreddit: 'lisp' };
+const initialState = { 
+    error: null,
+    posts: null,
+    subreddit: null 
+};
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(reducer, initialState, applyMiddleware(sagaMiddleware));

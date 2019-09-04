@@ -1,11 +1,11 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import { changeSubreddit, fetchPosts, handleSubmit } from '../actions';
+import { fetchPosts } from '../actions';
 import App from '../components/App';
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ changeSubreddit, fetchPosts, handleSubmit }, dispatch);
+    return bindActionCreators({ fetchPosts }, dispatch);
 }
 
 function mapStateToProps(state) {

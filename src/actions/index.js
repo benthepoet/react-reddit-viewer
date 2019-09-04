@@ -1,24 +1,10 @@
-import { CHANGE_SUBREDDIT, FETCH_POSTS } from './types';
+import { FETCH_POSTS } from './types';
 
-export const changeSubreddit = event => {
-    return {
-        type: CHANGE_SUBREDDIT,
+export const fetchPosts = event => (
+    {
+        type: FETCH_POSTS,
         payload: {
             subreddit: event.target.value
         }
-    };
-};
-
-export const fetchPosts = subreddit => {
-    return {
-        type: FETCH_POSTS,
-        payload: {
-            subreddit
-        }
     }
-};
-
-export const handleSubmit = (event, subreddit) => {
-    event.preventDefault();
-    return fetchPosts(subreddit);
-};
+);
