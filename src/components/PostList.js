@@ -4,7 +4,7 @@ import Post from './Post';
 
 const PostList = ({ posts, subreddit, onChangeSubreddit, onSubmit }) => (
     <div>
-        <form onSubmit={onSubmit}>
+        <form onSubmit={event => onSubmit(event, subreddit)}>
             <input type="text" placeholder="Subreddit" defaultValue={subreddit} onInput={onChangeSubreddit} />
             <button type="submit">Submit</button>
         </form>

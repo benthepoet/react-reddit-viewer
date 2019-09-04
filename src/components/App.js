@@ -4,7 +4,7 @@ import PostList from '../components/PostList';
 
 class App extends React.Component {
     componentDidMount() {
-        this.props.fetchPosts();
+        this.props.fetchPosts(this.props.subreddit);
     }
 
     render() {
