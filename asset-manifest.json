@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/react-reddit-viewer/static/css/main.5cdff915.chunk.css",
-    "main.js": "/react-reddit-viewer/static/js/main.71a4ca43.chunk.js",
-    "main.js.map": "/react-reddit-viewer/static/js/main.71a4ca43.chunk.js.map",
+    "main.js": "/react-reddit-viewer/static/js/main.0554aa24.chunk.js",
+    "main.js.map": "/react-reddit-viewer/static/js/main.0554aa24.chunk.js.map",
     "runtime~main.js": "/react-reddit-viewer/static/js/runtime~main.4b5db351.js",
     "runtime~main.js.map": "/react-reddit-viewer/static/js/runtime~main.4b5db351.js.map",
     "static/js/2.c23a609b.chunk.js": "/react-reddit-viewer/static/js/2.c23a609b.chunk.js",
     "static/js/2.c23a609b.chunk.js.map": "/react-reddit-viewer/static/js/2.c23a609b.chunk.js.map",
     "index.html": "/react-reddit-viewer/index.html",
-    "precache-manifest.21c85bc37a0323d7bfb3df59f93ed44c.js": "/react-reddit-viewer/precache-manifest.21c85bc37a0323d7bfb3df59f93ed44c.js",
+    "precache-manifest.086cf5e265ab913990b9b655d820af17.js": "/react-reddit-viewer/precache-manifest.086cf5e265ab913990b9b655d820af17.js",
     "service-worker.js": "/react-reddit-viewer/service-worker.js",
     "static/css/main.5cdff915.chunk.css.map": "/react-reddit-viewer/static/css/main.5cdff915.chunk.css.map"
   }
