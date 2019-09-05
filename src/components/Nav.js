@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Nav = ({ onInput }) => (
+export default ({ onInput }) => (
     <nav>
         <span className="brand">
-            <i className="fab fa-2x fa-reddit"></i> Reddit Viewer
+            <i className="fab fa-2x fa-reddit"></i> React Reddit Viewer
         </span>
         <div className="menu">
             <form onSubmit={event => event.preventDefault()}>
@@ -12,5 +12,3 @@ const Nav = ({ onInput }) => (
         </div>
     </nav>
 );
-
-export default Nav;

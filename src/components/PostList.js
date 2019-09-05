@@ -2,7 +2,7 @@ import React from 'react';
 
 import Post from './Post';
 
-const PostList = ({ posts, subreddit }) => (
+export default ({ posts, subreddit }) => (
     <div>
         <table className="width-full bg-white shadow-light">
             <thead>
@@ -16,5 +16,3 @@ const PostList = ({ posts, subreddit }) => (
         </table>
     </div>
 );
-
-export default PostList

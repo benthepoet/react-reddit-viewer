@@ -4,10 +4,10 @@ import Message from './Message';
 import Nav from './Nav';
 import PostList from './PostList';
 
-const App = ({ fetchPosts, message, posts, subreddit }) => (
+export default ({ fetchPosts, message, posts, subreddit }) => (
     <div>
         <Nav onInput={fetchPosts} />
-        <div className="flex pt-8">
+        <div className="flex pt-4">
             <div></div>
             <div>
                 {message && 
@@ -21,5 +21,3 @@ const App = ({ fetchPosts, message, posts, subreddit }) => (
         </div>
     </div>
 );
-
-export default App;
