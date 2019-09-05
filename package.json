@@ -1,8 +1,8 @@
 {
-  "name": "react-test",
+  "name": "react-reddit-viewer",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://benthepoet.github.io/reddit-react-redux",
+  "homepage": "https://benthepoet.github.io/react-reddit-viewer",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "he": "^1.2.0",
